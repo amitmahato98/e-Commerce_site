@@ -1,0 +1,86 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Oswald:wght@200..700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: "DM Sans", sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0 1.5rem 0 1.5rem;
+}
+:root {
+    --main-color: #161880;
+    --main-bg-color: #f1f3f7;
+    --main-border-color: #96969656;
+}
+body{
+    margin: 0 1.5rem 0 1.5rem;
+    background-color: var(--main-bg-color);
+}
+.nav-top{
+    /* height: 6rem; */
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-top a{
+    list-style: none;
+    text-decoration-line: none;
+    color: black;
+}
+.form{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+    height: 3rem;
+    display: flex;
+    border: 1px solid var(--main-border-color);
+    gap: 1rem;
+    
+}
+form select,form input{
+    font-size: 16px;
+    border: none;
+    outline: none;
+    /* height: 2.9rem; */
+    background-color: var(--main-bg-color);
+}
+form select{
+    padding: 0 10px 0 10px;
+    border-right: 1px solid var(--main-border-color);
+}
+form input{
+    width: 18rem;
+}
+.search-icon{
+    display: flex;
+
+}
+.search-icon .bx-search{
+    width: 3rem;
+    font-size: x-large;
+    color: var(--main-bg-color);
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.shortcuts{
+    display: flex;
+    gap: 1rem;
+}
+.shortcuts .bx{
+    font-size: 2.1rem;
+}
+.nav-top .shortcuts .wishlist-count{
+    position: relative;
+    top: -20px;
+    right: 5px;
+    /* position: absolute;
+    top: 20px;
+    right: 65px; */
+}
