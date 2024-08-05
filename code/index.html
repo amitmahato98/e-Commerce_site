@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <nav-top class="nav-top">
+    <nav-top class="nav-top container">
         <a href="" class="logo"><img src="./assets/asset 0.png" alt="logo"></a>
         <form action="post" class="form">
             <select name="--All Tags--" id="">
@@ -56,17 +56,64 @@
         </form>
         <div class="shortcuts">
             <a href=""><i class='bx bx-user'></i></a>
-            <a href="">
+            <a href="" class="wishlist">
                 <i class='bx bx-heart'></i>
                 <span class="wishlist-count">0</span>
             </a>
-            <a href=""><i class='bx bx-cart-alt'></i></a>
+            <a href="">
+                <i class='bx bx-cart-alt'></i>
+                <span class="cart-count">0</span>
+                
+            </a>
         </div>
     </nav-top>
+    <hr>
+    
+     <nav class="container">
+        <div  class="topics">
+            <div class="catagories">
+                <div href="" onclick="show_dropdowns()" style="cursor: pointer; display: flex; gap: 0.5rem; align-items: center; padding: 1rem 0;">
+                    <i class='bx bx-menu'></i>
+                    <p>All Catagories</p>
+                </div>
+                <ol class="dropdowns" id="dropdowns">
+                    <li><a href="">Laptops & Computers</a></li>
+                    <li><a href="">Wireless Camera</a></li>
+                    <li><a href="">Gaming Keyboard</a></li>
+                    <li><a href="">SmartPhone</a></li>
+                    <li><a href="">Wearable Camera</a></li>
+                    <li><a href="">Headphones & Audios</a></li>
+                    <li><a href="">ipad & Tablet</a></li>
+                    <li><a href="">SmartWatch</a></li>
+                    <li><a href="">Wireless Router</a></li>
+                    <li><a href="">All Catagories+</a></li>
+
+                </ol>
+            </div>
+            <div class="navlinks">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Shop</a></li>
+                    <li><a href="">Catagories</a></li>
+                    <li><a href="">Pages</a></li>
+                </ul>
+            </div>
+            <div class="offer">
+                <i class='bx bxs-zap bx-flashing' ></i>
+                <p>UP TO 60% off All Items</p>
+            </div>
+        </div>
+     </nav>
+     <nav-bottom class="nav-responsive">
+        
+
+     </nav-bottom>
 
 
 
 
+
+<script src="index.js"></script>
 </body>
 
 </html>
