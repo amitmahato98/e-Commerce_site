@@ -227,13 +227,10 @@ nav {
 .nav-responsive .logo img{
     width: 90px;
 }
-.sidebar{
-    top: 0;
-    position: absolute;
-    width: 50vw;
-    height: 100vh;
-    background-color: black;
-}
+
+
+   /* sidebar */
+   
 
 
 

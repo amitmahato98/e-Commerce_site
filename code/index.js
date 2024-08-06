@@ -6,7 +6,7 @@ dropdown.classList.toggle("show");
 function opensidebar(){
     let sidebar = document.getElementById('sidebar');
     let nav_responsive = document.getElementById('nav-responsive');
-    sidebar.classList.toggle("sidebar");
+    // sidebar.classList.toggle("active");
     // nav_responsive.classList.toggle("overlay")
     
 }
