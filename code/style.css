@@ -204,10 +204,10 @@ nav {
     padding: 1rem 0;
     display: none;
 }
-.nav-responsive a{
+/* .nav-responsive a{
     color: black;
     text-decoration: none;
-}
+} */
 .nav-responsive .bx{
     font-size: 1.5rem;
 }
@@ -231,6 +231,43 @@ nav {
 
    /* sidebar */
    
+.sidebar{
+    display: flex;
+    flex-direction: column;
+}
+.menu-content{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.content-items{
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+
+}
+.content-items .item-name-list{
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+
+}
+.content-name,.item-name{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
