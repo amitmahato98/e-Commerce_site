@@ -105,26 +105,27 @@
             </div>
         </div>
     </nav>
-<!-- Nav buttons -->
+<!-- Nav buttom -->
     <nav-bottom class="nav-responsive container">
         <div class="sidebar">
             <div class="button">
                 <button class="btn" onclick="showcat1(cat1)">Menu</button>
                 <button class="btn" onclick="showcat1(cat2)">Catagories</button>
-
             </div>
+            <hr>
             <div class="content">
                 <div class="menu-content">
                     <div class="content-1">
                         <div class="content-name">
                             <a href="">Home</a>
-                           <i class='bx bx-plus'></i>
+                           <i onclick="colhome()" class='bx bx-plus'></i>
                         </div>
-                        <div class="content-items">
-                            <a href="">Main-demo</a>
-                            <a href="">Products</a>
-                            <a href="">Minimalist</a>
-                            <a href="">Rtl</a>
+                        <hr>
+                        <div id="colhome" class="content-items collhome">
+                            <a href="">Main-demo</a><hr>
+                            <a href="">Products</a><hr>
+                            <a href="">Minimalist</a><hr>
+                            <a href="">Rtl</a><hr>
                         </div>
 
                     </div>
@@ -134,36 +135,36 @@
                     <div class="content-2">
                         <div class="content-name">
                             <a href="">Shop</a>
-                            <i class='bx bx-plus'></i>
-                        </div>
-                        <div class="content-items">
-                            <div class="content-items-name">
+                            <i onclick="colshop()" class='bx bx-plus'></i>
+                        </div><hr>
+                        <div id="colshop" class="colshop content-items">
+                            <div id="colshop" class="content-items-name">
                                 <div class="item-name">
                                     <p>Shop Layouts</p>
-                                   <i class='bx bx-plus'></i>
-                                </div>
-                                <div class="item-name-list">
-                                    <a href="">Filter Sidebar</a>
-                                    <a href="">Filter Drawer</a>
-                                    <a href="">Filter Horizontal</a>
-                                    <a href="">Full Width</a>
-                                    <a href="">Filter Price</a>
-                                    <a href=""></a>
+                                   <i onclick="colshoplay()" class='bx bx-plus'></i>
+                                </div><hr>
+                                <div id="colshop_layouts" class="item-name-list colshop_layouts">
+                                    <a href="">Filter Sidebar</a><hr>
+                                    <a href="">Filter Drawer</a><hr>
+                                    <a href="">Filter Horizontal</a><hr>
+                                    <a href="">Full Width</a><hr>
+                                    <a href="">Filter Price</a><hr>
+                                    
 
                                 </div>
                             </div>
                             <div class="content-items-name">
                                 <div class="item-name">
                                     <p>Product Layouts</p>
-                                   <i class='bx bx-plus'></i>
-                                </div>
-                                <div class="item-name-list">
-                                    <a href="">Thumbnail Slider</a>
-                                    <a href="">product Stacked</a>
-                                    <a href="">Product Thumbnail</a>
-                                    <a href="">product Card Sticky</a>
-                                    <a href="">product Large Media</a>
-                                    <a href="">Product Zoom Popup</a>
+                                   <i onclick="colshopproductlay()" class='bx bx-plus'></i>
+                                </div><hr>
+                                <div id="colshop_productlayouts" class="item-name-list colshop_productlayouts">
+                                    <a href="">Thumbnail Slider</a>   <hr>
+                                    <a href="">product Stacked</a><hr>
+                                    <a href="">Product Thumbnail</a><hr>
+                                    <a href="">product Card Sticky</a><hr>
+                                    <a href="">product Large Media</a><hr>
+                                    <a href="">Product Zoom Popup</a><hr>
 
                                 </div>
                             </div>
@@ -171,15 +172,15 @@
                             <div class="content-items-name">
                                 <div class="item-name">
                                     <p>Collections</p>
-                                   <i class='bx bx-plus'></i>
-                                </div>
-                                <div class="item-name-list">
-                                    <a href="">Collection List</a>
-                                    <a href="">Best Seller</a>
-                                    <a href="">New Collection</a>
-                                    <a href="">Trending Collections</a>
-                                    <a href="">Fratured Collections</a>
-                                    <a href="">On Sale</a>
+                                   <i onclick="colshopcollection()" class='bx bx-plus'></i>
+                                </div><hr>
+                                <div id="colshop_collection" class="colshop_collection item-name-list">
+                                    <a href="">Collection List</a><hr>
+                                    <a href="">Best Seller</a><hr>
+                                    <a href="">New Collection</a><hr>
+                                    <a href="">Trending Collections</a><hr>
+                                    <a href="">Fratured Collections</a><hr>
+                                    <a href="">On Sale</a><hr>
 
                                 </div>
                             </div>
@@ -188,15 +189,15 @@
                             <div class="content-items-name">
                                 <div class="item-name">
                                     <p>Explore More</p>
-                                   <i class='bx bx-plus'></i>
-                                </div>
-                                <div class="item-name-list">
-                                    <a href="">Collection Banner</a>
-                                    <a href="">Collection Sorting</a>
-                                    <a href="">Advanced Filer</a>
-                                    <a href="">Price Slider</a>
-                                    <a href="">Store Front Filter 2.0</a>
-                                    <a href="">Ajax Filter</a>
+                                   <i onclick="colshopexplore()" class='bx bx-plus'></i>
+                                </div><hr>
+                                <div id="colshop_explore" class="colshop_explore item-name-list">
+                                    <a href="">Collection Banner</a><hr>
+                                    <a href="">Collection Sorting</a><hr>
+                                    <a href="">Advanced Filer</a><hr>
+                                    <a href="">Price Slider</a><hr>
+                                    <a href="">Store Front Filter 2.0</a><hr>
+                                    <a href="">Ajax Filter</a><hr>
 
                                 </div>
                             </div>
@@ -205,43 +206,42 @@
                         </div>
 
                     </div>
-
-                    <a href="" class="content-3">Catagories</a>
+                    <a href="" class="content-3">Catagories</a><hr>
 
                     <div class="content-4">
                         <div class="content-name">
                             <a href="">Products</a>
-                            <i class='bx bx-plus'></i>
-                        </div>
-                        <div class="content-items">
+                            <i onclick="colproduct()" class='bx bx-plus'></i>
+                        </div><hr>
+                        <div  id="colproduct" class="colproduct content-items">
                             <div class="content-items-name">
                                 <div class="item-name">
                                     <p>Products Layouts</p>
-                                   <i class='bx bx-plus'></i>
-                                </div>
-                                <div class="item-name-list">
-                                    <a href="">Default Layouts</a>
-                                    <a href="">Varient Swatch</a>
-                                    <a href="">Varient Dropdowns</a>
-                                    <a href="">Products Tab</a>
-                                    <a href="">Products Accordion</a>
-                                    <a href="">Product Media Gallery</a>
-                                    <a href="">Products Recommendations</a>
+                                   <i onclick="colproductlay()" class='bx bx-plus'></i>
+                                </div><hr>
+                                <div id="colproduct_productlayout" class="colproduct_productlayout item-name-list">
+                                    <a href="">Default Layouts</a><hr>
+                                    <a href="">Varient Swatch</a><hr>
+                                    <a href="">Varient Dropdowns</a><hr>
+                                    <a href="">Products Tab</a><hr>
+                                    <a href="">Products Accordion</a><hr>
+                                    <a href="">Product Media Gallery</a><hr>
+                                    <a href="">Products Recommendations</a><hr>
 
                                 </div>
                             </div>
                             <div class="content-items-name">
                                 <div class="item-name">
                                     <p>Product Types</p>
-                                   <i class='bx bx-plus'></i>
-                                </div>
-                                <div class="item-name-list">
-                                    <a href="">Simple Products</a>
-                                    <a href="">Variable Products</a>
-                                    <a href="">Product Video</a>
-                                    <a href="">product 3D,AR models</a>
-                                    <a href="">product Color Swatches</a>
-                                    <a href="">Product Recently Veiwed</a>
+                                   <i onclick="colproducttype()" class='bx bx-plus'></i>
+                                </div><hr>
+                                <div id="colproduct_producttypes" class="colproduct_producttypes item-name-list">
+                                    <a href="">Simple Products</a><hr>
+                                    <a href="">Variable Products</a><hr>
+                                    <a href="">Product Video</a><hr>
+                                    <a href="">product 3D,AR models</a><hr>
+                                    <a href="">product Color Swatches</a><hr>
+                                    <a href="">Product Recently Veiwed</a><hr>
 
                                 </div>
                             </div>
@@ -249,16 +249,16 @@
                             <div class="content-items-name">
                                 <div class="item-name">
                                     <p>Products Features</p>
-                                   <i class='bx bx-plus'></i>
-                                </div>
-                                <div class="item-name-list">
-                                    <a href="">Ask a Qustion</a>
-                                    <a href="">Local Pickup Available</a>
-                                    <a href="">Share Products</a>
-                                    <a href="">Pre-order Products</a>
-                                    <a href="">Products collapsible Tabs</a>
-                                    <a href="">Products Terms & Connditions</a>
-                                    <a href="">Dynamic Checkout Button</a>
+                                   <i onclick="colproductfeature()" class='bx bx-plus'></i>
+                                </div><hr>
+                                <div id="colproduct_productfeature" class="colproduct_productfeature item-name-list">
+                                    <a href="">Ask a Qustion</a><hr>
+                                    <a href="">Local Pickup Available</a><hr>
+                                    <a href="">Share Products</a><hr>
+                                    <a href="">Pre-order Products</a><hr>
+                                    <a href="">Products collapsible Tabs</a><hr>
+                                    <a href="">Products Terms & Connditions</a><hr>
+                                    <a href="">Dynamic Checkout Button</a><hr>
 
                                 </div>
                             </div>
@@ -267,17 +267,17 @@
                             <div class="content-items-name">
                                 <div class="item-name">
                                     <p>Exclusive Features</p>
-                                   <i class='bx bx-plus'></i>
-                                </div>
-                                <div class="item-name-list">
-                                    <a href="">Size Guide Popup</a>
-                                    <a href="">Sticky Add To Cart</a>
-                                    <a href="">Frequently Bought Together</a>
-                                    <a href="">Advanced Coustoms Feild</a>
-                                    <a href="">Store Front Filter 2.0</a>
-                                    <a href="">Stock Counter</a>
-                                    <a href="">Countdown Timer</a>
-                                    <a href="">Back in Stock Alert</a>
+                                   <i onclick="colproductexclusivefeature()" class='bx bx-plus'></i>
+                                </div><hr>
+                                <div id="colproduct_exclusivefeature" class="colproduct_exclusivefeature item-name-list">
+                                    <a href="">Size Guide Popup</a><hr>
+                                    <a href="">Sticky Add To Cart</a><hr>
+                                    <a href="">Frequently Bought Together</a><hr>
+                                    <a href="">Advanced Coustoms Feild</a><hr>
+                                    <a href="">Store Front Filter 2.0</a><hr>
+                                    <a href="">Stock Counter</a><hr>
+                                    <a href="">Countdown Timer</a><hr>
+                                    <a href="">Back in Stock Alert</a><hr>
 
                                 </div>
                             </div>
@@ -288,32 +288,32 @@
                     </div>
 
 
-                    <a href="" class="content-5">Blogs</a>
+                    <a href="" class="content-5">Blogs</a><hr>
 
 
                     <div class="content-6">
                         <div class="content-name">
                             <a href="">Pages</a>
-                            <i class='bx bx-plus'></i>
-                        </div>
-                        <div class="content-items">
-                            <a href="">About Us</a>
-                            <a href="">Contact Us</a>
-                            <a href="">FAQs</a>
-                            <a href="">Find Store Locations</a>
-                            <a href="">wishlist</a>
-                            <a href="">MyAccount</a>
-                            <a href="">Compare</a>
-                            <a href="">404</a>
-                            <a href="">Privacy Policy</a>
-                            <a href="">Terms Of Services</a>
-                            <a href="">Refund Policy</a>
+                            <i onclick="colpage()" class='bx bx-plus'></i>
+                        </div><hr>
+                        <div id="colpage" class="colpage content-items">
+                            <a href="">About Us</a><hr>
+                            <a href="">Contact Us</a><hr>
+                            <a href="">FAQs</a><hr>
+                            <a href="">Find Store Locations</a><hr>
+                            <a href="">wishlist</a><hr>
+                            <a href="">MyAccount</a><hr>
+                            <a href="">Compare</a><hr>
+                            <a href="">404</a><hr>
+                            <a href="">Privacy Policy</a><hr>
+                            <a href="">Terms Of Services</a><hr>
+                            <a href="">Refund Policy</a><hr>
                         </div>
 
                     </div>
 
                     <div class="icon-wishlist">
-                        <!-- icon -->
+                        <i class='bx bx-heart' ></i>
                         <p>Wishlist</p>
                     </div>
 

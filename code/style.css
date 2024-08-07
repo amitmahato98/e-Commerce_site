@@ -204,10 +204,10 @@ nav {
     padding: 1rem 0;
     display: none;
 }
-/* .nav-responsive a{
+.nav-responsive a{
     color: black;
     text-decoration: none;
-} */
+}
 .nav-responsive .bx{
     font-size: 1.5rem;
 }
@@ -230,6 +230,8 @@ nav {
 
 
    /* sidebar */
+
+   /* collapse */
    
 .sidebar{
     display: flex;
@@ -238,26 +240,226 @@ nav {
 .menu-content{
     display: flex;
     flex-direction: column;
-    gap: 2rem;
 }
 .content-items{
-    padding-left: 1rem;
+    /* padding-left: 1rem; */
     display: flex;
     flex-direction: column;
 
 }
+.content-name a,.content-5,.content-3{
+    padding: 0.8rem 0 0.8rem 0.8rem;
+}
+.item-name p,.content-items a{
+    padding: 0.8rem 0 0.8rem 1.6rem;
+}
+.item-name-list a{
+    padding: 0.8rem 0 0.8rem 2.4rem;
+}
+.button{
+    padding: 1rem;
+}
+.button button{
+    font-size: 1.01rem;
+    font-weight: 500;
+    padding: 0.3rem 0.5rem;
+    border-radius: 5px;
+    border: 1px solid var(--main-border-color);
+}
 .content-items .item-name-list{
-    padding-left: 1rem;
     display: flex;
     flex-direction: column;
 
 }
 .content-name,.item-name{
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
+/* home */
+.content-1 .collhome {
+    max-height: 0;
+    
+    overflow: hidden;
+    transition: max-height .5s ease-out, opacity 1s ease-in-out;
+}
+ .collhome.collapses{
+    max-height: 500px;
+    
+} 
+
+/* shop */
+
+.content-2 .colshop {
+    max-height: 0;
+    
+    overflow: hidden;
+    transition: max-height .5s ease-out, opacity 1s ease-in-out;
+} 
+  .colshop.collapses{
+    max-height: 5000px;
+    
+} 
+
+.content-2 .colshop_layouts {
+    max-height: 0;
+    
+    overflow: hidden;
+    transition: max-height .5s ease-out, opacity 1s ease-in-out;
+}
+ .colshop_layouts.collapses{
+    max-height: 500px;
+    
+} 
+
+.content-2 .colshop_productlayouts {
+    max-height: 0;
+    
+    overflow: hidden;
+    transition: max-height .5s ease-out, opacity 1s ease-in-out;
+}
+ .colshop_productlayouts.collapses{
+    max-height: 500px;
+    
+} 
 
 
+.content-2 .colshop_collection {
+    max-height: 0;
+    
+    overflow: hidden;
+    transition: max-height .5s ease-out, opacity 1s ease-in-out;
+}
+ .colshop_collection.collapses{
+    max-height: 500px;
+    
+} 
+
+
+.content-2 .colshop_explore {
+    max-height: 0;
+    
+    overflow: hidden;
+    transition: max-height .5s ease-out, opacity 1s ease-in-out;
+}
+ .colshop_explore.collapses{
+    max-height: 500px;
+    
+} 
+
+
+/* products */
+
+
+.content-4 .colproduct {
+    max-height: 0;
+    
+    overflow: hidden;
+    transition: max-height .5s ease-out, opacity 1s ease-in-out;
+}
+ .colproduct.collapses{
+    max-height: 5000px;
+    
+} 
+
+
+
+.content-4 .colproduct_productlayout {
+    max-height: 0;
+    
+    overflow: hidden;
+    transition: max-height .5s ease-out, opacity 1s ease-in-out;
+}
+ .colproduct_productlayout.collapses{
+    max-height: 500px;
+    
+} 
+
+
+
+.content-4 .colproduct_producttypes {
+    max-height: 0;
+    
+    overflow: hidden;
+    transition: max-height .5s ease-out, opacity 1s ease-in-out;
+}
+ .colproduct_producttypes.collapses{
+    max-height: 500px;
+    
+} 
+
+
+
+
+.content-4 .colproduct_productfeature {
+    max-height: 0;
+    
+    overflow: hidden;
+    transition: max-height .5s ease-out, opacity 1s ease-in-out;
+}
+ .colproduct_productfeature.collapses{
+    max-height: 500px;
+    
+} 
+
+
+
+
+.content-4 .colproduct_exclusivefeature {
+    max-height: 0;
+    
+    overflow: hidden;
+    transition: max-height .5s ease-out, opacity 1s ease-in-out;
+}
+ .colproduct_exclusivefeature.collapses{
+    max-height: 500px;
+    
+} 
+
+/* pages */
+
+
+.content-6 .colpage {
+    max-height: 0;
+    /*  */
+    overflow: hidden;
+    transition: max-height 1s ease-in;
+}
+ .colpage.collapses{
+    max-height: 5000px;
+    /*  */
+} 
+
+   /* collapse end */
+
+   /* sidebar style */
+   .icon-wishlist{
+    display: flex;
+   }
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+@keyframes colhomeAnimation {
+    from {
+        max-height: 0;
+        
+    }
+
+    to {
+        max-height: 10rem;
+        opacity: 1;
+    }
+} */
 
 
 

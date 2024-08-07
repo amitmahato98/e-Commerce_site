@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collapsible Menu with Transition</title>
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        .nav-responsive.container {
+            display: flex;
+            flex-direction: column;
+        }
+        .sidebar {
+            width: 300px;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+        .btn {
+            background-color: #555;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        .content-items {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: max-height .5s ease, opacity .5s ease;
+        }
+        .content-items.show {
+            max-height: 500px; /* Set this to a large enough value */
+            opacity: 1;
+            /* overflow: hidden; */
+        }
+        .content-name {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .content-name i {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <nav-bottom class="nav-responsive container">
+        <div class="sidebar">
+            <div class="button">
+                <button class="btn" onclick="showcat1('cat1')">Menu</button>
+                <button class="btn" onclick="showcat1('cat2')">Categories</button>
+            </div>
+            <div class="content">
+                <div class="menu-content">
+                    <div class="content-1">
+                        <div class="content-name">
+                            <a href="#">Home</a>
+                            <i onclick="collapse('colhome')" class='bx bx-plus'></i>
+                        </div>
+                        <div id="colhome" class="content-items collhome">
+                            <a href="#">Main-demo</a>
+                            <a href="#">Products</a>
+                            <a href="#">Minimalist</a>
+                            <a href="#">Rtl</a>
+                        </div>
+                    </div>
+                    <!-- Repeat similar structure for other content sections -->
+                </div>
+            </div>
+        </div>
+        <div>
+            <i class='bx bx-menu'></i>
+        </div>
+        <a href="#" class="logo"><img src="./assets/asset 0.png" alt="logo"></a>
+        <div class="search-cart">
+            <a href="#"><i class='bx bx-search'></i></a>
+            <a href="#">
+                <i class='bx bx-cart-alt'></i>
+                <span class="cart-count">0</span>
+            </a>
+        </div>
+    </nav-bottom>
+    <script>
+        function collapse(id) {
+            const element = document.getElementById(id);
+            element.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
