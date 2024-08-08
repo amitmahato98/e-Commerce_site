@@ -231,51 +231,57 @@ nav {
 
    /* sidebar */
 
+.sidebar i{
+cursor: pointer;
+}
+#sidebar:active{
+    scroll-behavior: smooth;
+}
+.sidebar a{
+    color: black;
+    text-decoration: none;
+}
+
+.sidebar {
+    width: 450px;
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: -550px;
+    height: 100%;
+    transition: 0.3s;
+    z-index: 1000;
+    overflow-y: auto;
+}
+.sidebar.active {
+    left: 0;
+}
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 999;
+}
+/* .backdrop.active {
+    display: block;
+} */
+#sidebar{
+    display: none;
+
+}
+
+
    /* collapse */
    
-.sidebar{
-    display: flex;
-    flex-direction: column;
-}
-.menu-content{
-    display: flex;
-    flex-direction: column;
-}
-.content-items{
-    /* padding-left: 1rem; */
-    display: flex;
-    flex-direction: column;
 
-}
-.content-name a,.content-5,.content-3{
-    padding: 0.8rem 0 0.8rem 0.8rem;
-}
-.item-name p,.content-items a{
-    padding: 0.8rem 0 0.8rem 1.6rem;
-}
-.item-name-list a{
-    padding: 0.8rem 0 0.8rem 2.4rem;
-}
-.button{
-    padding: 1rem;
-}
-.button button{
-    font-size: 1.01rem;
-    font-weight: 500;
-    padding: 0.3rem 0.5rem;
-    border-radius: 5px;
-    border: 1px solid var(--main-border-color);
-}
-.content-items .item-name-list{
-    display: flex;
-    flex-direction: column;
-
-}
-.content-name,.item-name{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
 /* home */
 .content-1 .collhome {
     max-height: 0;
@@ -431,13 +437,143 @@ nav {
 } 
 
    /* collapse end */
+   .catagories-content{
+    display: none;
+   }
+   .sidebar{
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.menu-content{
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+}
+.content-items{
+    /* padding-left: 1rem; */
+    display: flex;
+    flex-direction: column;
+
+}
+.content-name a,.content-5,.content-3{
+    padding: 0.8rem 0 0.8rem 0.8rem;
+    font-weight: 500;
+}
+.item-name p,.content-items a{
+    padding: 0.8rem 0 0.8rem 1.6rem;
+}
+.item-name-list a{
+    padding: 0.8rem 0 0.8rem 2.4rem;
+}
+
+.content-items .item-name-list{
+    display: flex;
+    flex-direction: column;
+
+}
+.content-name,.item-name{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+   /* button */
+   .btn.active{
+    color: white;
+    background-color: #161880;
+}
+.button{
+    display: flex;
+    justify-content: space-between;
+    gap: 0.6rem;
+    padding: 0.6rem 1rem;
+}
+.button button{
+    font-size: 1.01rem;
+    font-weight: 500;
+    padding: 0.3rem 0.5rem;
+    border-radius: 5px;
+    border: 1px solid var(--main-border-color);
+}
+.button .right button{
+    background-color: #fff;
+    border: none;
+    font-size: x-large;
+    font-weight: 400;
+}
+button{
+    cursor: pointer;
+}
 
    /* sidebar style */
    .icon-wishlist{
+    padding: 0.8rem 0 0.8rem 0.8rem;
     display: flex;
+    text-align: center;
+    gap: 0.5rem;
+    font-weight: 400;
    }
+   .icon-wishlist .bx{
+    font-size: 1.3rem;
+   }
+   .icon-wishlist .cart-count {
+    position: absolute;
+    top: 67vh;
+    left: 22px;
+    width: 15px;
+    font-size: small;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: white;
+    background-color: var(--main-color);
 
+}
+.formloginresister{
+    display: flex;
+    padding: 2rem 0;
+    flex-direction: column;
+    gap: 1rem;
+}
+.formloginresister button{
+    padding: 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+    background-color: var(--main-color);
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
 
+}
+.formloginresister button:hover{
+    background-color: black;
+}
+.formloginresister button .bx{
+    /* text-align: center; */
+    font-size: 1.5rem;
+}
+
+.formloginresister .icon-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+.lang-money{
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* asidebar catagories content */
+.catagories-content{
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+}
 
 
 
@@ -498,6 +634,12 @@ nav {
     }
     .container{
         margin: 0 1rem;
+    }
+    #sidebar{
+        display: flex;
+    }
+    .backdrop.active {
+        display: block;
     }
 
 }

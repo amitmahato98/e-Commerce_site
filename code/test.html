@@ -8,20 +8,33 @@
         body {
             font-family: Arial, sans-serif;
             display: flex;
-            height: 100vh;
+            /* height: 100vh; */
             margin: 0;
+            overflow: hidden; /* Prevent scrolling when sidebar is open */
         }
         .sidebar {
-            width: 200px;
+            width: 250px;
             background-color: #333;
             color: white;
             display: flex;
             flex-direction: column;
             padding: 10px;
+            position: fixed;
+            top: 0;
+            left: -250px;
+            height: 100%;
+            transition: 0.3s;
+            z-index: 1000;
+        }
+        .sidebar.active {
+            left: 0;
         }
         .content {
             flex-grow: 1;
             padding: 20px;
+            margin-left: 250px;
+            transition: margin-left 0.3s;
+            /* overflow: auto; */
         }
         .btn {
             background-color: #555;
@@ -31,17 +44,70 @@
             margin-bottom: 10px;
             cursor: pointer;
         }
+        .btn.active {
+            background-color: #777;
+        }
         .form {
             display: none;
+        }
+        /* Initially show form1 */
+        #form1 {
+            display: block;
+        }
+        .backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+            z-index: 999;
+        }
+        .backdrop.active {
+            display: block;
+        }
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
+    <div class="backdrop" onclick="toggleSidebar()"></div>
     <div class="sidebar">
-        <button class="btn" onclick="showForm('form1')">Show Form 1</button>
-        <button class="btn" onclick="showForm('form2')">Show Form 2</button>
+        <!-- Add close button -->
+        <button class="close-btn" onclick="toggleSidebar()">✖</button>
+        <!-- Add active class to the first button -->
+        <button class="btn active" onclick="showForm('form1', this)">Show Form 1</button>
+        <button class="btn" onclick="showForm('form2', this)">Show Form 2</button>
+        
+        <div style="height: 20vh;">asdf</div>
+        <div style="height: 20vh;">dfg</div>
+        <div style="height: 20vh;">ERDF</div>
+        <div style="height: 20vh;">afg</div>
+        
+        <div style="height: 20vh;">asdf</div>
+        <div style="height: 20vh;">dfg</div>
+        <div style="height: 20vh;">ERDF</div>
+        <div style="height: 20vh;">afg</div>
+        <div style="height: 20vh;">asdf</div>
+        <div style="height: 20vh;">dfg</div>
+        <div style="height: 20vh;">ERDF</div>
+        <div style="height: 20vh;">afg</div>
+        <div style="height: 20vh;">asdf</div>
+        <div style="height: 20vh;">dfg</div>
+        <div style="height: 20vh;">ERDF</div>
+        <div style="height: 20vh;">afg</div>
     </div>
     <div class="content">
+        <button class="btn" onclick="toggleSidebar()">Toggle Sidebar</button>
         <div id="form1" class="form">
             <h2>Sign Up</h2>
             <label for="email">Email:</label><br>
@@ -61,87 +127,26 @@
     </div>
 
     <script>
-        function showForm(formId) {
+        function toggleSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            const backdrop = document.querySelector('.backdrop');
+            sidebar.classList.toggle('active');
+            backdrop.classList.toggle('active');
+            document.body.classList.toggle('no-scroll');
+        }
+
+        // Function to show the selected form and highlight the button
+        function showForm(formId, button) {
             // Hide all forms
             document.querySelectorAll('.form').forEach(form => form.style.display = 'none');
             // Show the selected form
             document.getElementById(formId).style.display = 'block';
+
+            // Remove active class from all buttons
+            document.querySelectorAll('.btn').forEach(btn => btn.classList.remove('active'));
+            // Add active class to the clicked button
+            button.classList.add('active');
         }
     </script>
 </body>
 </html>
-
-<div class="content-2">
-    <div class="content-name">
-        <a href="">Shop</a>
-        <!-- icon -->
-    </div>
-    <div class="content-items">
-        <div class="content-items-name">
-            <div class="item-name">
-                <p>Shop Layouts</p>
-                <!-- icons -->
-            </div>
-            <div class="item-name-list">
-                <a href="">Filter Sidebar</a>
-                <a href="">Filter Drawer</a>
-                <a href="">Filter Horizontal</a>
-                <a href="">Full Width</a>
-                <a href="">Filter Price</a>
-                <a href="">Filter columns</a>
-
-            </div>
-        </div>
-        <div class="content-items-name">
-            <div class="item-name">
-                <p>Product Layouts</p>
-                <!-- icons -->
-            </div>
-            <div class="item-name-list">
-                <a href="">Thumbnail Slider</a>
-                <a href="">product Stacked</a>
-                <a href="">Product Thumbnail</a>
-                <a href="">product Card Sticky</a>
-                <a href="">product Large Media</a>
-                <a href="">Product Zoom Popup</a>
-
-            </div>
-        </div>
-        
-        <div class="content-items-name">
-            <div class="item-name">
-                <p>Collections</p>
-                <!-- icons -->
-            </div>
-            <div class="item-name-list">
-                <a href="">Collection List</a>
-                <a href="">Best Seller</a>
-                <a href="">New Collection</a>
-                <a href="">Trending Collections</a>
-                <a href="">Fratured Collections</a>
-                <a href="">On Sale</a>
-
-            </div>
-        </div>
-        
-        
-        <div class="content-items-name">
-            <div class="item-name">
-                <p>Explore More</p>
-                <!-- icons -->
-            </div>
-            <div class="item-name-list">
-                <a href="">Collection Banner</a>
-                <a href="">Collection Sorting</a>
-                <a href="">Advanced Filer</a>
-                <a href="">Price Slider</a>
-                <a href="">Store Front Filter 2.0</a>
-                <a href="">Ajax Filter</a>
-
-            </div>
-        </div>
-        
-    
-    </div>
-
-</div>

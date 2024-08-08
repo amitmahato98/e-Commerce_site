@@ -106,15 +106,40 @@
         </div>
     </nav>
 <!-- Nav buttom -->
+ <div id="backdrop" class="backdrop"></div>
     <nav-bottom class="nav-responsive container">
-        <div class="sidebar">
+      
+        <div id="" class=" ">
+            <i onclick="togglesidebar()" class='bx bx-menu'></i>
+        </div>
+        <a href="" class="logo"><img src="./assets/asset 0.png" alt="logo"></a>
+        <div class="search-cart">
+            <a href=""><i class='bx bx-search'></i></a>
+            <a href="">
+                <i class='bx bx-cart-alt'></i>
+                <span class="cart-count">0</span>
+            </a>
+
+        </div>
+
+    </nav-bottom>
+
+
+
+    <aside>
+        <div id="sidebar" class="sidebar">
             <div class="button">
-                <button class="btn" onclick="showcat1(cat1)">Menu</button>
-                <button class="btn" onclick="showcat1(cat2)">Catagories</button>
+                <div class="left">
+                    <button id="btn1" class="btn active" onclick="showcat('cat1',this)">Menu</button>
+                    <button id="btn2" class="btn" onclick="showcat('cat2',this)">Catagories</button>
+                </div>
+                <div class="right">
+                    <button onclick="togglesidebar()">✖</button>
+                </div>
             </div>
             <hr>
             <div class="content">
-                <div class="menu-content">
+                <div id="cat1" class="menu-content sidebarcontent">
                     <div class="content-1">
                         <div class="content-name">
                             <a href="">Home</a>
@@ -314,14 +339,14 @@
 
                     <div class="icon-wishlist">
                         <i class='bx bx-heart' ></i>
+                        <span class="cart-count">0</span>
                         <p>Wishlist</p>
-                    </div>
-
-                    <form action="">
+                    </div><hr>
+                    <form action="" class="formloginresister">
                         <h2>My Account</h2>
                         <button class="icon-login">
-                            <!-- icon -->
-                            <b>login</b>
+                            <i class='bx bxs-user'></i> 
+                            <div>Login</div>
                         </button>
                         <button>Resister</button>
                     </form>
@@ -350,24 +375,249 @@
 
 
                 </div>
+                <div id="cat2" class="catagories-content sidebarcontent">
+                        <div class="content-1">
+                            <div class="content-name">
+                                <a href="">Home</a>
+                               <i onclick="colhome()" class='bx bx-plus'></i>
+                            </div>
+                            <hr>
+                            <div id="colhome" class="content-items collhome">
+                                <a href="">Main-demo</a><hr>
+                                <a href="">Products</a><hr>
+                                <a href="">Minimalist</a><hr>
+                                <a href="">Rtl</a><hr>
+                            </div>
+    
+                        </div>
+    
+    
+    
+                        <div class="content-2">
+                            <div class="content-name">
+                                <a href="">Shop</a>
+                                <i onclick="colshop()" class='bx bx-plus'></i>
+                            </div><hr>
+                            <div id="colshop" class="colshop content-items">
+                                <div id="colshop" class="content-items-name">
+                                    <div class="item-name">
+                                        <p>Shop Layouts</p>
+                                       <i onclick="colshoplay()" class='bx bx-plus'></i>
+                                    </div><hr>
+                                    <div id="colshop_layouts" class="item-name-list colshop_layouts">
+                                        <a href="">Filter Sidebar</a><hr>
+                                        <a href="">Filter Drawer</a><hr>
+                                        <a href="">Filter Horizontal</a><hr>
+                                        <a href="">Full Width</a><hr>
+                                        <a href="">Filter Price</a><hr>
+                                        
+    
+                                    </div>
+                                </div>
+                                <div class="content-items-name">
+                                    <div class="item-name">
+                                        <p>Product Layouts</p>
+                                       <i onclick="colshopproductlay()" class='bx bx-plus'></i>
+                                    </div><hr>
+                                    <div id="colshop_productlayouts" class="item-name-list colshop_productlayouts">
+                                        <a href="">Thumbnail Slider</a>   <hr>
+                                        <a href="">product Stacked</a><hr>
+                                        <a href="">Product Thumbnail</a><hr>
+                                        <a href="">product Card Sticky</a><hr>
+                                        <a href="">product Large Media</a><hr>
+                                        <a href="">Product Zoom Popup</a><hr>
+    
+                                    </div>
+                                </div>
+    
+                                <div class="content-items-name">
+                                    <div class="item-name">
+                                        <p>Collections</p>
+                                       <i onclick="colshopcollection()" class='bx bx-plus'></i>
+                                    </div><hr>
+                                    <div id="colshop_collection" class="colshop_collection item-name-list">
+                                        <a href="">Collection List</a><hr>
+                                        <a href="">Best Seller</a><hr>
+                                        <a href="">New Collection</a><hr>
+                                        <a href="">Trending Collections</a><hr>
+                                        <a href="">Fratured Collections</a><hr>
+                                        <a href="">On Sale</a><hr>
+    
+                                    </div>
+                                </div>
+    
+    
+                                <div class="content-items-name">
+                                    <div class="item-name">
+                                        <p>Explore More</p>
+                                       <i onclick="colshopexplore()" class='bx bx-plus'></i>
+                                    </div><hr>
+                                    <div id="colshop_explore" class="colshop_explore item-name-list">
+                                        <a href="">Collection Banner</a><hr>
+                                        <a href="">Collection Sorting</a><hr>
+                                        <a href="">Advanced Filer</a><hr>
+                                        <a href="">Price Slider</a><hr>
+                                        <a href="">Store Front Filter 2.0</a><hr>
+                                        <a href="">Ajax Filter</a><hr>
+    
+                                    </div>
+                                </div>
+    
+    
+                            </div>
+    
+                        </div>
+                        <a href="" class="content-3">Catagories</a><hr>
+    
+                        <div class="content-4">
+                            <div class="content-name">
+                                <a href="">Products</a>
+                                <i onclick="colproduct()" class='bx bx-plus'></i>
+                            </div><hr>
+                            <div  id="colproduct" class="colproduct content-items">
+                                <div class="content-items-name">
+                                    <div class="item-name">
+                                        <p>Products Layouts</p>
+                                       <i onclick="colproductlay()" class='bx bx-plus'></i>
+                                    </div><hr>
+                                    <div id="colproduct_productlayout" class="colproduct_productlayout item-name-list">
+                                        <a href="">Default Layouts</a><hr>
+                                        <a href="">Varient Swatch</a><hr>
+                                        <a href="">Varient Dropdowns</a><hr>
+                                        <a href="">Products Tab</a><hr>
+                                        <a href="">Products Accordion</a><hr>
+                                        <a href="">Product Media Gallery</a><hr>
+                                        <a href="">Products Recommendations</a><hr>
+    
+                                    </div>
+                                </div>
+                                <div class="content-items-name">
+                                    <div class="item-name">
+                                        <p>Product Types</p>
+                                       <i onclick="colproducttype()" class='bx bx-plus'></i>
+                                    </div><hr>
+                                    <div id="colproduct_producttypes" class="colproduct_producttypes item-name-list">
+                                        <a href="">Simple Products</a><hr>
+                                        <a href="">Variable Products</a><hr>
+                                        <a href="">Product Video</a><hr>
+                                        <a href="">product 3D,AR models</a><hr>
+                                        <a href="">product Color Swatches</a><hr>
+                                        <a href="">Product Recently Veiwed</a><hr>
+    
+                                    </div>
+                                </div>
+    
+                                <div class="content-items-name">
+                                    <div class="item-name">
+                                        <p>Products Features</p>
+                                       <i onclick="colproductfeature()" class='bx bx-plus'></i>
+                                    </div><hr>
+                                    <div id="colproduct_productfeature" class="colproduct_productfeature item-name-list">
+                                        <a href="">Ask a Qustion</a><hr>
+                                        <a href="">Local Pickup Available</a><hr>
+                                        <a href="">Share Products</a><hr>
+                                        <a href="">Pre-order Products</a><hr>
+                                        <a href="">Products collapsible Tabs</a><hr>
+                                        <a href="">Products Terms & Connditions</a><hr>
+                                        <a href="">Dynamic Checkout Button</a><hr>
+    
+                                    </div>
+                                </div>
+    
+    
+                                <div class="content-items-name">
+                                    <div class="item-name">
+                                        <p>Exclusive Features</p>
+                                       <i onclick="colproductexclusivefeature()" class='bx bx-plus'></i>
+                                    </div><hr>
+                                    <div id="colproduct_exclusivefeature" class="colproduct_exclusivefeature item-name-list">
+                                        <a href="">Size Guide Popup</a><hr>
+                                        <a href="">Sticky Add To Cart</a><hr>
+                                        <a href="">Frequently Bought Together</a><hr>
+                                        <a href="">Advanced Coustoms Feild</a><hr>
+                                        <a href="">Store Front Filter 2.0</a><hr>
+                                        <a href="">Stock Counter</a><hr>
+                                        <a href="">Countdown Timer</a><hr>
+                                        <a href="">Back in Stock Alert</a><hr>
+    
+                                    </div>
+                                </div>
+    
+    
+                            </div>
+    
+                        </div>
+    
+    
+                        <a href="" class="content-5">Blogs</a><hr>
+    
+    
+                        <div class="content-6">
+                            <div class="content-name">
+                                <a href="">Pages</a>
+                                <i onclick="colpage()" class='bx bx-plus'></i>
+                            </div><hr>
+                            <div id="colpage" class="colpage content-items">
+                                <a href="">About Us</a><hr>
+                                <a href="">Contact Us</a><hr>
+                                <a href="">FAQs</a><hr>
+                                <a href="">Find Store Locations</a><hr>
+                                <a href="">wishlist</a><hr>
+                                <a href="">MyAccount</a><hr>
+                                <a href="">Compare</a><hr>
+                                <a href="">404</a><hr>
+                                <a href="">Privacy Policy</a><hr>
+                                <a href="">Terms Of Services</a><hr>
+                                <a href="">Refund Policy</a><hr>
+                            </div>
+    
+                        </div>
+    
+                        <div class="icon-wishlist">
+                            <i class='bx bx-heart' ></i>
+                            <span class="cart-count">0</span>
+                            <p>Wishlist</p>
+                        </div><hr>
+                        <form action="" class="formloginresister">
+                            <h2>My Account</h2>
+                            <button class="icon-login">
+                                <i class='bx bxs-user'></i> 
+                                <div>Login</div>
+                            </button>
+                            <button>Resister</button>
+                        </form>
+    
+    
+                        <form class="lang-money">
+                            <select name="" id="">
+                                <option selected value="Usd">United State USD $</option>
+                                <option value="Usd">United Kingdom $</option>
+                                <option value="Usd">United Arab Emerits UAE $</option>
+                                <option value="Usd">Austrilan $</option>
+                            </select>
+                            <select name="" id="">
+                                <option value="" selected>English</option>
+                                <option value="">Nepali</option>
+                                <option value="">Hindi</option>
+                                <option value="">Maithili</option>
+                                <option value="">Urdu</option>
+                                <option value="">Korean</option>
+                                <option value="">Deutch</option>
+                                <option value="">Spanish</option>
+                                <option value="">French</option>
+                            </select>
+                        </form>
+    
+    
+    
+                    
+                    <div class="test">asdf</div>
+                </div>
 
 
             </div>
         </div>
-        <div id="" class=" ">
-            <i class='bx bx-menu'></i>
-        </div>
-        <a href="" class="logo"><img src="./assets/asset 0.png" alt="logo"></a>
-        <div class="search-cart">
-            <a href=""><i class='bx bx-search'></i></a>
-            <a href="">
-                <i class='bx bx-cart-alt'></i>
-                <span class="cart-count">0</span>
-            </a>
-
-        </div>
-
-    </nav-bottom>
+    </aside>
 
 
     <div class="test" style="height:100vh ;">a</div>

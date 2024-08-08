@@ -79,3 +79,22 @@ function colpage(){
     colhome.classList.toggle('collapses')
 }
 
+// cat-sidebar
+function showcat(catid,button) {
+    document.querySelectorAll('.sidebarcontent').forEach(sidebarcontent => sidebarcontent.style.display = 'none');
+    document.getElementById(catid).style.display = 'flex';
+
+
+    document.querySelectorAll('.btn').forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
+}
+
+// tooglesidebar
+function togglesidebar() {
+    const sidebar = document.getElementById('sidebar');
+    const backdrop = document.querySelector('.backdrop');
+    sidebar.classList.toggle('active');
+    backdrop.classList.toggle('active');
+    // document.body.classList.toggle('no-scroll');
+}
+
