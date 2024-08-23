@@ -507,25 +507,27 @@ button{
 
    /* sidebar style */
    .icon-wishlist{
+    position: relative;
     padding: 0.8rem 0 0.8rem 0.8rem;
     display: flex;
     text-align: center;
     gap: 0.5rem;
     font-weight: 400;
+    height: 3rem;
+    width: 5rem;
    }
    .icon-wishlist .bx{
     font-size: 1.3rem;
    }
    .icon-wishlist .cart-count {
     position: absolute;
-    top: 67vh;
-    left: 22px;
-    width: 15px;
-    font-size: small;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
+    width: 15px; 
+    bottom: 1.5rem;
+    right: 3.5rem;
     color: white;
     background-color: var(--main-color);
 
@@ -569,6 +571,9 @@ button{
 }
 
 /* asidebar catagories content */
+#cat2{
+    display: none;
+}
 .catagories-content{
     display: flex;
     justify-content: start;
@@ -617,6 +622,9 @@ button{
 
 
 @media (width < 988px) {
+    i{
+        cursor: pointer;
+    }
     .offer {
         display: none;
     }
