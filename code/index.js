@@ -79,6 +79,60 @@ function colpage(){
     colhome.classList.toggle('collapses')
 }
 
+// collapse catagories
+// {
+
+function collapcom(){
+    const colshop = document.getElementById('collapcom');
+    colshop.classList.toggle('collapses')
+}
+
+function colsmartphone(){
+    const colshop = document.getElementById('colsmartphone');
+    colshop.classList.toggle('collapses')
+}
+
+function colsmartwatch(){
+    const colshop = document.getElementById('colsmartwatch');
+    colshop.classList.toggle('collapses')
+}
+
+function colheadphones(){
+    const colshop = document.getElementById('colheadphones');
+    colshop.classList.toggle('collapses')
+}
+
+function colaccessories(){
+    const colshop = document.getElementById('colaccessories');
+    colshop.classList.toggle('collapses')
+}
+
+
+function colcamera(){
+    const colshop = document.getElementById('colcamera');
+    colshop.classList.toggle('collapses')
+}
+
+
+function colspeaker(){
+    const colshop = document.getElementById('colspeaker');
+    colshop.classList.toggle('collapses')
+}
+
+
+function colother(){
+    const colshop = document.getElementById('colother');
+    colshop.classList.toggle('collapses')
+}
+
+
+function colCathome(){
+    const colshop = document.getElementById('colCathome');
+    colshop.classList.toggle('collapses')
+}
+
+// }
+
 // cat-sidebar
 function showcat(catid,button) {
     document.querySelectorAll('.sidebarcontent').forEach(sidebarcontent => sidebarcontent.style.display = 'none');
