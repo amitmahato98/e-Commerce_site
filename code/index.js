@@ -151,4 +151,17 @@ function togglesidebar() {
     backdrop.classList.toggle('active');
     // document.body.classList.toggle('no-scroll');
 }
+// All catagories shows items
+// 1. for computers and laptops
+function catdropdown_1(){
+    const allcatag_lapcom = document.getElementById('allcatag-lapcom');
+    allcatag_lapcom.classList.toggle('show');
+    console.log('hello');
+}
+
+function catdropdown_2(){
+    const allcatag_wirelesscam= document.getElementById('allcatag-wirelesscam');
+    allcatag_wirelesscam.classList.toggle('show');
+    console.log('hello');
+}
 

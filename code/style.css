@@ -147,24 +147,35 @@ nav {
     display: none;
     background-color: var(--main-bg-color);
 }
+.dropdowns .catdropdown-1{
+    cursor: pointer;
+}
 /* dropdown 1 => Laptops and computers */
-#allcatag-lapcom{
+#allcatag-lapcom,#allcatag-wirelesscam{
     display: none;
 
 }
-.allcatag-lapcom{
+.allcatag-lapcom,.allcatag-wirelesscam{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    height: 60vh;   
+    /* height: 60vh;    */
+    position: relative;
+    /* width: 50vw; */
+    /* background-color: ; */
 }
-.allcatag-lapcom a{
+.allcatag-lapcom a,.allcatag-wirelesscam a{
     color: black;
     text-decoration: none;
     font-weight: 200;
+    cursor: pointer;
 }
-.allcatag-lapcom h3{
+.allcatag-lapcom a:hover,.allcatag-wirelesscam a:hover{
+    transform: translateX(10px);
+    color: var(--main-color);
+}
+.allcatag-lapcom h3,.allcatag-wirelesscam h3{
     font-weight: 350;
 }
 .sphone-accessories,.swatch-cam,.headp-speaker{
@@ -174,10 +185,11 @@ nav {
     align-items: center;
     padding: 1rem;
 }
-.sphone-accessories div,.swatch-cam div,.headp-speaker div{
+.sphone-accessories div,.headp-accessorie div,.swatch-cam div,.swatch-cam div,.headp-speaker div{
     padding: 0.7rem 0;
 }
-.allcatag-lapcom .smartphone a,.allcatag-lapcom .accessorie a,.allcatag-lapcom .smartwatch a,.allcatag-lapcom .camera a,.allcatag-lapcom .headphone a,.allcatag-lapcom .speaker a{
+.allcatag-lapcom .smartphone a,.allcatag-lapcom .accessorie a,.allcatag-lapcom .smartwatch a,.allcatag-lapcom .camera a,.allcatag-lapcom .headphone a,.allcatag-lapcom .speaker a,
+.allcatag-wirelesscam .smartwatch a,.allcatag-wirelesscam .accessorie a,.allcatag-wirelesscam .camera a,.allcatag-wirelesscam .headphone a {
     display: flex;
     justify-content: center;
     align-items: start;
@@ -185,17 +197,36 @@ nav {
     padding: 0.3rem 0;
     padding-left: 0;
 }
-.allcatag-lapcom img{
-    width: 15vw;
+.allcatag-lapcom img,.allcatag-wirelesscam img{
+    width: 18vw;
     object-fit: contain;
 }
-.catdropdown-1:hover{
+.catdropdown-1:hover,.catdropdown-2:hover{
     color: var(--main-color);
 }
-.catdropdown-1:hover #allcatag-lapcom{
+.catdropdown-1,.catdropdown-2{
     display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.catdropdown-1 .icon-item,.catdropdown-2 .icon-item{
+    display: flex;
+    align-items: center;
 
 }
+/* .catdropdown-1:hover #allcatag-lapcom{
+    display: flex;
+
+} */
+#allcatag-lapcom.show,#allcatag-wirelesscam.show{
+    display: flex;
+    animation: dropdownAnimation 0.5s forwards;
+    position: absolute;
+    left: 4cm;
+    /* padding: 1rem; */
+    width: 80vw;
+}
+
 
 /* dropdown 1 => Laptops and computers css complete*/
 
