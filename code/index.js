@@ -153,15 +153,18 @@ function togglesidebar() {
 }
 // All catagories shows items
 // 1. for computers and laptops
-function catdropdown_1(){
-    const allcatag_lapcom = document.getElementById('allcatag-lapcom');
-    allcatag_lapcom.classList.toggle('show');
-    console.log('hello');
-}
+
+
+
+let allcatag_lapcom = document.getElementById('allcatag-lapcom');
+let allcatag_wirelesscam= document.getElementById('allcatag-wirelesscam');
 
 function catdropdown_2(){
-    const allcatag_wirelesscam= document.getElementById('allcatag-wirelesscam');
     allcatag_wirelesscam.classList.toggle('show');
-    console.log('hello');
+    allcatag_lapcom.classList.remove('show');
+}
+function catdropdown_1(){
+    allcatag_lapcom.classList.toggle('show');
+    allcatag_wirelesscam.classList.remove('show');
 }
 
