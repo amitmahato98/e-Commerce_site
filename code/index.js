@@ -168,3 +168,22 @@ function catdropdown_1(){
     allcatag_wirelesscam.classList.remove('show');
 }
 
+// body section image carasol and grids
+
+let index = 0;
+
+function showSlide(i) {
+    const slides = document.querySelector('.slider');
+    const totalSlides = document.querySelectorAll('.slider .img-slider').length;
+    index = (i + totalSlides) % totalSlides; // Ensure index wraps around
+    slides.style.transform = `translateX(-${index * 100 / totalSlides}%)`;
+
+    // Update active dot
+    document.querySelectorAll('.dot').forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+    });
+}
+
+function goToSlide(i) {
+    showSlide(i);
+}
