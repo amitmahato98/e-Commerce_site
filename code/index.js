@@ -175,7 +175,7 @@ let index = 0;
 function showSlide(i) {
     const slides = document.querySelector('.slider');
     const totalSlides = document.querySelectorAll('.slider .img-slider').length;
-    index = (i + totalSlides) % totalSlides; // Ensure index wraps around
+    index = (i + totalSlides) % totalSlides; 
     slides.style.transform = `translateX(-${index * 100 / totalSlides}%)`;
 
     // Update active dot

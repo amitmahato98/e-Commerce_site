@@ -148,17 +148,22 @@ nav {
     background-color: white;
     z-index: 1;
 }
-.dropdowns li{
+
+.dropdowns li {
     cursor: pointer;
 
 }
+
 /* dropdown 1 => Laptops and computers */
 
-#allcatag-lapcom,#allcatag-wirelesscam{
+#allcatag-lapcom,
+#allcatag-wirelesscam {
     display: none;
-    
+
 }
-.allcatag-lapcom,.allcatag-wirelesscam{
+
+.allcatag-lapcom,
+.allcatag-wirelesscam {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -169,31 +174,54 @@ nav {
     /* width: 50vw; */
     /* background-color: ; */
 }
-.allcatag-lapcom a,.allcatag-wirelesscam a{
+
+.allcatag-lapcom a,
+.allcatag-wirelesscam a {
     color: black;
     text-decoration: none;
     font-weight: 200;
     cursor: pointer;
 }
-.allcatag-lapcom a:hover,.allcatag-wirelesscam a:hover{
+
+.allcatag-lapcom a:hover,
+.allcatag-wirelesscam a:hover {
     transform: translateX(10px);
     color: var(--main-color);
 }
-.allcatag-lapcom h3,.allcatag-wirelesscam h3{
+
+.allcatag-lapcom h3,
+.allcatag-wirelesscam h3 {
     font-weight: 350;
 }
-.sphone-accessories,.swatch-cam,.headp-speaker{
+
+.sphone-accessories,
+.swatch-cam,
+.headp-speaker {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 1rem;
 }
-.sphone-accessories div,.headp-accessorie div,.swatch-cam div,.swatch-cam div,.headp-speaker div{
+
+.sphone-accessories div,
+.headp-accessorie div,
+.swatch-cam div,
+.swatch-cam div,
+.headp-speaker div {
     padding: 0.7rem 0;
 }
-.allcatag-lapcom .smartphone a,.allcatag-lapcom .accessorie a,.allcatag-lapcom .smartwatch a,.allcatag-lapcom .camera a,.allcatag-lapcom .headphone a,.allcatag-lapcom .speaker a,
-.allcatag-wirelesscam .smartwatch a,.allcatag-wirelesscam .accessorie a,.allcatag-wirelesscam .camera a,.allcatag-wirelesscam .headphone a {
+
+.allcatag-lapcom .smartphone a,
+.allcatag-lapcom .accessorie a,
+.allcatag-lapcom .smartwatch a,
+.allcatag-lapcom .camera a,
+.allcatag-lapcom .headphone a,
+.allcatag-lapcom .speaker a,
+.allcatag-wirelesscam .smartwatch a,
+.allcatag-wirelesscam .accessorie a,
+.allcatag-wirelesscam .camera a,
+.allcatag-wirelesscam .headphone a {
     display: flex;
     justify-content: center;
     align-items: start;
@@ -201,28 +229,37 @@ nav {
     padding: 0.3rem 0;
     padding-left: 0;
 }
-.allcatag-lapcom img,.allcatag-wirelesscam img{
+
+.allcatag-lapcom img,
+.allcatag-wirelesscam img {
     width: 18vw;
     object-fit: contain;
 }
-.catdropdown-1:hover,.catdropdown-2:hover{
+
+.catdropdown-1:hover,
+.catdropdown-2:hover {
     color: var(--main-color);
 }
-.catdropdown-1,.catdropdown-2{
+
+.catdropdown-1,
+.catdropdown-2 {
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
-.catdropdown-1 .icon-item,.catdropdown-2 .icon-item{
+
+.catdropdown-1 .icon-item,
+.catdropdown-2 .icon-item {
     display: flex;
     align-items: center;
 
 }
+
 /* .catdropdown-1:hover #allcatag-lapcom{
     display: flex;
 
 } */
-#allcatag-lapcom.show{
+#allcatag-lapcom.show {
     display: flex;
     animation: dropdownAnimation 0.5s forwards;
     position: absolute;
@@ -231,7 +268,8 @@ nav {
     /* padding: 1rem; */
     width: 65vw;
 }
-#allcatag-wirelesscam.show{
+
+#allcatag-wirelesscam.show {
     border-radius: 15px;
     display: flex;
     animation: dropdownAnimation 0.5s forwards;
@@ -889,23 +927,31 @@ button {
 /* now body sections start image carasol and grids */
 .section-1 {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-columns: 1.5fr 1.5fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 20px; 
-    height: 80vh; 
-    padding: 2rem 1rem; 
+    gap: 20px;
+    height: 85vh;
+    padding: 2rem 0;
     box-sizing: border-box;
 }
-.section-1 .box1,.section-1 .box2,.section-1 .box3{
+
+.section-1 a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.section-1 .box1,
+.section-1 .box2,
+.section-1 .box3 {
     border-radius: 20px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: start;
+    align-items: start;
 }
 
 .box1 {
-    grid-column: 1 / span 2; 
-    grid-row: 1 / span 2; 
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
     background-color: lightblue;
     position: relative;
     overflow: hidden;
@@ -923,30 +969,34 @@ button {
     left: 0;
 }
 
-.slider .img-slider{
-    width: 33.333%; 
+.slider .img-slider {
+    width: 33.333%;
     height: auto;
 }
-.slider .img-slider-1{
-object-fit: cover;
-background-repeat: no-repeat;
-background-size: cover;
-background-image: url(assets/asset\ 27.png);
+
+.slider .img-slider-1 {
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(assets/asset\ 27.png);
 }
-.slider .img-slider-2{
+
+.slider .img-slider-2 {
     object-fit: cover;
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url(assets/asset\ 29.png);
-    
-    
+
+
 }
-.slider .img-slider-3{
+
+.slider .img-slider-3 {
     object-fit: cover;
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url(assets/asset\ 25.png);
 }
+
 .dots {
     position: absolute;
     bottom: 10px;
@@ -954,7 +1004,7 @@ background-image: url(assets/asset\ 27.png);
     display: flex;
     justify-content: center;
     gap: 10px;
-  
+
 
 }
 
@@ -974,7 +1024,8 @@ background-image: url(assets/asset\ 27.png);
     border-color: black;
 }
 
-.box2, .box3 {
+.box2,
+.box3 {
     background-color: lightcoral;
 }
 
@@ -984,7 +1035,8 @@ background-image: url(assets/asset\ 27.png);
     background-size: cover;
     background-image: url(assets/asset\ 31.png);
     grid-column: 3 / 4;
-    grid-row: 1 / 2; 
+    grid-row: 1 / 2;
+
 }
 
 .box3 {
@@ -995,22 +1047,150 @@ background-image: url(assets/asset\ 27.png);
     grid-column: 3 / 4;
     grid-row: 2 / 3;
 }
-.img-slider{
+
+.img-slider {
     display: flex;
     justify-content: center;
     align-items: start;
     flex-direction: column;
     padding: 1.5rem;
     gap: 1.5rem;
-    
-}
-.img-slide h1{
-    background-color: red;
-    padding: 5rem;
-    font-size: 9rem;
+    color: white;
+
 }
 
+.img-slider h1 {
+    width: 50%;
+    font-size: 3rem;
+    font-weight: 500;
+}
 
+.img-slider p {
+    line-height: 1.5rem;
+    width: 50%;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.img-slider a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 40%;
+    color: #000000;
+    background-color: white;
+    width: max-content;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 300;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+}
+
+.img-slider a:hover {
+    background-color: black;
+    color: white;
+}
+
+.img-slider a .bx-arrow-back {
+    font-size: 1.2rem;
+    font-weight: 100;
+}
+
+.box-2,
+.box-3 {
+    flex-direction: column;
+    color: white;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.box-2 h2,
+.box-3 h2 {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.box-2 p,
+.box-3 p {
+    font-weight: 600;
+
+}
+
+.section-1 .box-2 span,
+.section-1 .box-3 span {
+    text-decoration: underline;
+}
+
+/* section 1 ended */
+
+/* section 2 starting */
+.section-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+
+}
+
+.section-2 .homepade,
+.section-2 .appleipad,
+.section-2 .herocamera {
+    width: 33.33%;
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+    padding: 1rem;
+    justify-content: center;
+    align-items: start;
+    height: 180px;
+    border-radius: 8px;
+
+}
+
+.section-2 .homepade a,
+.section-2 .herocamera a {
+    color: #fff;
+}
+
+.section-2 .appleipad a {
+    color: #000;
+}
+
+.section-2 .homepade {
+    background-image: url(assets/asset\ 33.png);
+    object-fit: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: #fff;
+
+}
+
+.section-2 .appleipad {
+    color: black;
+    background-image: url(assets/asset\ 34.png);
+    object-fit: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.section-2 .herocamera {
+    color: #fff;
+    background-image: url(assets/asset\ 35.png);
+    object-fit: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* transition: 2s ease-in; */
+    transition: background-size 5s ease-in-out;
+}
+
+.section-2 .homepade:hover,.section-2 .appleipad:hover,.section-2 .herocamera:hover {
+    background-position: center;
+    background-size: cover;
+    background-size: 105%;
+}
 
 
 /* 
@@ -1067,7 +1247,7 @@ background-image: url(assets/asset\ 27.png);
         display: flex;
     }
 
-    .container{
+    .container {
         margin: 0 1rem;
     }
 
@@ -1078,5 +1258,4 @@ background-image: url(assets/asset\ 27.png);
     .backdrop.active {
         display: block;
     }
-
 }
