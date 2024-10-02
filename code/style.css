@@ -13,7 +13,7 @@ html {
 }
 
 :root {
-    --main-color: #161880;
+    --main-color: #0e1074;
     --main-bg-color: #f1f3f7;
     --main-border-color: #96969656;
 }
@@ -1192,6 +1192,30 @@ button {
     background-size: 105%;
 }
 
+.section-3{
+    margin: 2rem 0;
+}
+
+.section-3 h1{
+    font-size: 2.5rem;
+}
+.section-3 .item-product{
+    display: flex;
+    gap: 2.5rem;
+    padding: 1rem 0;
+}
+.section-3 .item-product a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #413f3f;
+    font-weight: 700;
+    padding: 1rem;
+    transition: 0.5s ease-in-out;
+}
+.section-3 .item-product a:hover{
+    border-bottom: 1px solid #161880;
+    color: #161880;
+}
 
 /* 
 @keyframes colhomeAnimation {
