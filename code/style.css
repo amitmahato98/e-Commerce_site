@@ -1192,6 +1192,7 @@ button {
     background-size: 105%;
 }
 
+/* section 3 started */
 .section-3{
     margin: 2rem 0;
 }
@@ -1201,22 +1202,252 @@ button {
 }
 .section-3 .item-product{
     display: flex;
-    gap: 2.5rem;
+    gap: 2rem;
     padding: 1rem 0;
 }
-.section-3 .item-product a{
-    font-size: 1.5rem;
+
+
+.item-header {
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 10px;
+    text-align: center;
+    margin: 0 5px;
     text-decoration: none;
-    color: #413f3f;
-    font-weight: 700;
-    padding: 1rem;
-    transition: 0.5s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
-.section-3 .item-product a:hover{
-    border-bottom: 1px solid #161880;
+
+/* Add underline on hover and when active */
+.item-header:hover,
+.item-header.active {
+    /* text-decoration: underline; */
+    border-bottom: 2px solid #0e1074;
     color: #161880;
 }
 
+/* Subitems container will be below the row, initially hidden */
+.subitems {
+    display: none;
+    margin: 20px;
+    list-style-type: square;
+}
+
+/* Subitems will show without underlining */
+.subitems li {
+    text-decoration: none;
+}
+
+/* Style to ensure subitems are always in one place */
+.subitem-container {
+    margin-top: 20px;
+}
+
+.subitem-container ul {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px; /* Gap between cards */
+}
+
+.card {
+    width: 18%;
+    height: 60vh; /* Fixed height for the card */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    overflow: hidden; /* Prevent overflow */
+    position: relative;
+}
+
+.card img {
+    height: 50%; /* Limit image height to 50% of the card */
+    width: 100%;
+    object-fit: cover; /* Keep the image proportionate */
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+}
+
+/* Hide second image by default */
+.card img.second {
+    opacity: 0;
+    position: absolute; /* Overlay it on top of the first image */
+    top: 0;
+    left: 0;
+}
+
+/* Show second image on hover */
+.card:hover img.first {
+    opacity: 0; /* Hide the first image */
+}
+
+.card:hover img.second {
+    opacity: 1; /* Show the second image */
+}
+
+.card h3 {
+    font-size: 16px;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.card .price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.colors {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    position: relative; /* Needed for tooltip positioning */
+}
+
+.color {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+    text-align: center;
+    line-height: 20px;
+    position: relative; /* Needed for tooltip positioning */
+}
+
+/* Tooltip for Colors */
+.color:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    left: 0;
+    bottom: 25px; /* Move tooltip above the color */
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    margin-right: 5px; /* 5px gap between the icon and tooltip */
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.rating span {
+    margin-right: 5px;
+}
+
+.stock-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.stock-dot {
+    height: 10px;
+    width: 10px;
+    background-color: green;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.stock {
+    color: green;
+    text-align: left;
+}
+
+/* Quick Shop Link */
+.quick-shop {
+    position: absolute;
+    bottom: 50%; /* Start below the card */
+    left: 0;
+    right: 0;
+    background-color: #1e3a8a; /* Dark blue background */
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, bottom 0.5s ease-in-out;
+}
+
+/* Hover over the card image to show Quick Shop */
+.card:hover .quick-shop {
+    opacity: 1;
+    bottom: 50%; /* Move up when hovered */
+}
+
+/* Floating Action Icons (Wishlist, Compare, Quick View) */
+.action-icons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.card:hover .action-icons {
+    opacity: 1;
+}
+
+.action-icons a {
+    display: block;
+    background-color: #fff;
+    padding: 8px;
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+
+.action-icons a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Tooltip for Icons */
+.action-icons a:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    left: -90px; /* Move tooltip to the left */
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    margin-right: 5px; /* 5px gap between the icon and tooltip */
+}
+
+/* Style the icons */
+.action-icons i {
+    font-size: 18px;
+    color: #333;
+}
 /* 
 @keyframes colhomeAnimation {
     from {

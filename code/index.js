@@ -187,3 +187,22 @@ function showSlide(i) {
 function goToSlide(i) {
     showSlide(i);
 }
+
+
+// for item product 
+document.querySelectorAll('.item-header').forEach(item => {
+    item.addEventListener('click', () => {
+        // Remove 'active' class from all headers
+        document.querySelectorAll('.item-header').forEach(i => i.classList.remove('active'));
+        // Hide all subitems
+        document.querySelectorAll('.subitems').forEach(sub => sub.style.display = 'none');
+        
+        // Add 'active' class to the clicked item
+        item.classList.add('active');
+        // Show the corresponding subitems
+        const target = document.getElementById(item.getAttribute('data-target'));
+        if (target) {
+            target.style.display = 'block';
+        }
+    });
+});
