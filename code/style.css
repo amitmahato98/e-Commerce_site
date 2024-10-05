@@ -1186,21 +1186,24 @@ button {
     transition: background-size 5s ease-in-out;
 }
 
-.section-2 .homepade:hover,.section-2 .appleipad:hover,.section-2 .herocamera:hover {
+.section-2 .homepade:hover,
+.section-2 .appleipad:hover,
+.section-2 .herocamera:hover {
     background-position: center;
     background-size: cover;
     background-size: 105%;
 }
 
 /* section 3 started */
-.section-3{
+.section-3 {
     margin: 2rem 0;
 }
 
-.section-3 h1{
+.section-3 h1 {
     font-size: 2.5rem;
 }
-.section-3 .item-product{
+
+.section-3 .item-product {
     display: flex;
     gap: 2rem;
     padding: 1rem 0;
@@ -1216,10 +1219,12 @@ button {
     margin: 0 5px;
     text-decoration: none;
 }
-.item-header:hover{
+
+.item-header:hover {
 
     transition: 0.3s ease-in-out;
 }
+
 /* Add underline on hover and when active */
 .item-header:hover,
 .item-header.active {
@@ -1258,12 +1263,14 @@ button {
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 20px 0;
-    gap: 20px; /* Gap between cards */
+    gap: 20px;
+    /* Gap between cards */
 }
 
 .card {
     width: 18%;
-    height: 60vh; /* Fixed height for the card */
+    height: 60vh;
+    /* Fixed height for the card */
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 10px;
@@ -1273,32 +1280,76 @@ button {
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
-    overflow: hidden; /* Prevent overflow */
+    overflow: hidden;
+    /* Prevent overflow */
     position: relative;
 }
 
+.card .saletag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 5px 10px;
+    border-top-left-radius: 11px;
+    border-bottom-right-radius: 11px;
+    background-color: #000;
+    color: #fff;
+    font-size: 0.8rem;
+}
+
+.card .soldouttag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 5px 10px;
+    border-top-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+    background-color: #000;
+    color: #fff;
+    font-size: 0.8rem;
+}
+
+.card .newtag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 5px 10px;
+    border-top-left-radius: 11px;
+    border-bottom-right-radius: 11px;
+    background-color: #0e1074;
+    color: #fff;
+    font-size: 0.8rem;
+}
+
+
 .card img {
-    height: 50%; /* Limit image height to 50% of the card */
+    height: 50%;
+    /* Limit image height to 50% of the card */
     width: 100%;
-    object-fit: cover; /* Keep the image proportionate */
-    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+    object-fit: cover;
+    /* Keep the image proportionate */
+    transition: opacity 0.3s ease;
+    /* Smooth transition for opacity */
 }
 
 /* Hide second image by default */
 .card img.second {
     opacity: 0;
-    position: absolute; /* Overlay it on top of the first image */
+    position: absolute;
+    /* Overlay it on top of the first image */
     top: 0;
     left: 0;
 }
 
 /* Show second image on hover */
 .card:hover img.first {
-    opacity: 0; /* Hide the first image */
+    opacity: 0;
+    /* Hide the first image */
 }
 
 .card:hover img.second {
-    opacity: 1; /* Show the second image */
+    opacity: 1;
+    /* Show the second image */
 }
 
 .card h3 {
@@ -1307,7 +1358,8 @@ button {
     text-align: left;
     margin-bottom: 5px;
 }
-.card h3:hover{
+
+.card h3:hover {
     transition: 0.2s ease-in;
     color: #0e1074;
 }
@@ -1319,7 +1371,8 @@ button {
     text-align: left;
     margin-bottom: 5px;
 }
-.card .price span{
+
+.card .price span {
     padding-right: 5px;
     text-decoration: line-through;
 }
@@ -1328,7 +1381,8 @@ button {
     display: flex;
     align-items: center;
     margin-bottom: 5px;
-    position: relative; /* Needed for tooltip positioning */
+    position: relative;
+    /* Needed for tooltip positioning */
 }
 
 .color {
@@ -1339,7 +1393,8 @@ button {
     margin-right: 5px;
     text-align: center;
     line-height: 20px;
-    position: relative; /* Needed for tooltip positioning */
+    position: relative;
+    /* Needed for tooltip positioning */
 }
 
 /* Tooltip for Colors */
@@ -1347,14 +1402,16 @@ button {
     content: attr(data-tooltip);
     position: absolute;
     left: 0;
-    bottom: 25px; /* Move tooltip above the color */
+    bottom: 25px;
+    /* Move tooltip above the color */
     background-color: #333;
     color: #fff;
     padding: 5px;
     border-radius: 5px;
     font-size: 12px;
     white-space: nowrap;
-    margin-right: 5px; /* 5px gap between the icon and tooltip */
+    margin-right: 5px;
+    /* 5px gap between the icon and tooltip */
 }
 
 .rating {
@@ -1390,10 +1447,12 @@ button {
 /* Quick Shop Link */
 .quick-shop {
     position: absolute;
-    bottom: 50%; /* Start below the card */
+    bottom: 50%;
+    /* Start below the card */
     left: 0;
     right: 0;
-    background-color: #1e3a8a; /* Dark blue background */
+    background-color: #1e3a8a;
+    /* Dark blue background */
     color: #fff;
     text-align: center;
     padding: 10px;
@@ -1405,7 +1464,8 @@ button {
 /* Hover over the card image to show Quick Shop */
 .card:hover .quick-shop {
     opacity: 1;
-    bottom: 50%; /* Move up when hovered */
+    bottom: 50%;
+    /* Move up when hovered */
 }
 
 /* Floating Action Icons (Wishlist, Compare, Quick View) */
@@ -1442,7 +1502,8 @@ button {
 .action-icons a:hover::after {
     content: attr(data-tooltip);
     position: absolute;
-    left: -90px; /* Move tooltip to the left */
+    left: -90px;
+    /* Move tooltip to the left */
     top: 50%;
     transform: translateY(-50%);
     background-color: #333;
@@ -1451,7 +1512,8 @@ button {
     border-radius: 5px;
     font-size: 12px;
     white-space: nowrap;
-    margin-right: 5px; /* 5px gap between the icon and tooltip */
+    margin-right: 5px;
+    /* 5px gap between the icon and tooltip */
 }
 
 /* Style the icons */
@@ -1459,6 +1521,73 @@ button {
     font-size: 18px;
     color: #333;
 }
+
+
+/* .section-3 end  */
+/* .section-4 started  */
+
+.section-4 .camphone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.section-4 .camphone .image-container{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    width: 100%;
+    color: white;
+    /* padding: 1rem; */
+    /* gap: 1rem; */
+} 
+.section-4 .camphone .image-container img{
+    border-radius: 15px;
+
+}
+.image-container {
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    
+}
+.section-4{
+    padding: 1rem 0;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    border-radius: 15px;
+}
+ .image:hover {
+    transform: scale(1.1); /* Zooms the image by 1.1 on hover */
+    overflow: hidden;
+}
+
+
+.text-overlay {
+    padding: 1rem;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 0.5rem;
+
+
+}
+
+.section-4 .camphone .image-container a{
+    color: white;
+}
+
+
+
 /* 
 @keyframes colhomeAnimation {
     from {
